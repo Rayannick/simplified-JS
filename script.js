@@ -269,3 +269,34 @@ buttons.forEach(button => {
       button.innerText = currentClick
      })
 })
+
+// lesson 14 : ternary operator(if else condition in one line)
+
+// In case of putting a value on base of a condition, we can use this operator
+
+let isloggedin = false;
+
+const userMessage = isloggedin ? 'welcome back user' : 'who the fuck are you?'
+
+
+console.log(userMessage)
+
+// lesson 15 : switch 
+
+const userAge = document.querySelector('#blabla')
+
+userAge.addEventListener('change',()=>{
+
+    const age = parseInt(userAge.value);
+
+    switch (age) {
+        case 15:
+            console.log('young ')
+            break;
+    
+        case 20:
+            console.log('not so young')    
+        default:
+            break;
+    }   
+})
