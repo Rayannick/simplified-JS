@@ -300,3 +300,27 @@ userAge.addEventListener('change',()=>{
             break;
     }   
 })
+
+// lesson  : recursion
+
+const person = {
+    name : 'abc',
+    friend : {
+        name : 'bcd',
+        friend : {
+            name : 'cde'
+        }
+    }
+}
+
+
+function printNameOnly(name){
+    if(name == null) return;
+    console.log(name);
+    printNameOnly(name.friend)
+}
+
+printNameOnly(person)
+
+
+// return : abc bcd cde
