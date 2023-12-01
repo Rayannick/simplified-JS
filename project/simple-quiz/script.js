@@ -9,7 +9,8 @@
 const form = document.getElementById('quiz-form')
 const answers =Array.from(document.querySelectorAll('.answer')) //query gives us string/ irretable obj. it will return an array for filter method
 const questions = document.querySelectorAll('.question-item')
-const aalert = document.getElementById('alert')
+const congrats = document.getElementById('good_alert')
+const warning = document.getElementById('bad_alert')
 
 
 
@@ -45,9 +46,14 @@ checkedAns.forEach(n=> {
   const allAnswered = checkedAns.length === questions.length
 
   if(allTrue && allAnswered) {
-    aalert.classList.add('active')
+    congrats.classList.add('active')
     setTimeout(function(){
-      aalert.classList.remove('active')
+      congrats.classList.remove('active')
+    },3000)
+  }else{
+    warning.classList.add('active')
+    setTimeout(function(){
+      warning.classList.remove('active')
     },3000)
   }
 })
