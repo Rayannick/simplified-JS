@@ -6,6 +6,7 @@ const username = document.getElementById('username')
 const password = document.getElementById('password')
 const Cpassword = document.getElementById('password-confirmation')
 const errorsList = document.querySelector('.errors-list')
+const errorsContainer = document.querySelector('.errors')
 
 
 
@@ -56,6 +57,10 @@ function clearErrors() {
 
    errorsList.removechild(errorsList.children[0])
   }
+
+errorsContainer.classList.remove('show')
+
+
 }
 
 // TODO: Define this function
@@ -63,4 +68,9 @@ function showErrors(errorMessages) {
   // Add each error to the error-list element
   // Make sure to use an li as the element for each error
   // Also, make sure you add the show class to the errors container
+errorMessages.forEach(e => {
+  errorsList.innerHTML = `<li>${e}</li>`
+});
+errorsContainer.classList.add('show')
+
 }
