@@ -13,7 +13,6 @@ const errorsContainer = document.querySelector('.errors')
 
 // TODO: Create an event listener for when the form is submitted and do the following inside of it.
 form.addEventListener('submit',(e)=>{
-  e.preventDefault();
 
 
   const errorMessages = [];
@@ -21,11 +20,11 @@ clearErrors();
 
 
   const Inputvalue = username.value
-  if(Inputvalue.lenght < 6 ){
+  if(Inputvalue.length < 6 ){
     errorMessages.push('username should and must be at least 6 charecter')
   }
 
-  if(password.value.lenght < 10){
+  if(password.value.length < 10){
     errorMessages.push ('Are you serious?!? get a bigger one or get hucked')
   }
 
@@ -34,7 +33,17 @@ clearErrors();
   }
 
 
+console.log(Inputvalue.length)
+console.log(password.value)
+console.log(Inputvalue.length)
 
+
+
+
+if (errorMessages.length >0){
+showErrors();
+e.preventDefault()
+}
 
 })
 //    TODO: Create an array to store all error messages and clear any old error messages
