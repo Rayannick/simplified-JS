@@ -1,14 +1,12 @@
 // TODO: Select all elements needed
 //    Use the HTML to figure out what classes/ids will work best for selecting each element
-
-const form = document.getElementById('form');
-const username = document.getElementById('username')
-const password = document.getElementById('password')
-const Cpassword = document.getElementById('password-confirmation')
-const errorsList = document.querySelector('.errors-list')
-const errorsContainer = document.querySelector('.errors')
-
-
+const form = document.querySelector("#form")
+const usernameInput = document.querySelector("#username")
+const passwordInput = document.querySelector("#password")
+const passwordConfirmInput = document.querySelector("#password-confirmation")
+const termsInput = document.querySelector("#terms")
+const errorsContainer = document.querySelector(".errors")
+const errorsList = document.querySelector(".errors-list")
 
 
 // TODO: Create an event listener for when the form is submitted and do the following inside of it.
@@ -19,29 +17,26 @@ form.addEventListener('submit',(e)=>{
 clearErrors();
 
 
-  const Inputvalue = username.value
+  const Inputvalue = usernameInput.value
   if(Inputvalue.length < 6 ){
     errorMessages.push('username should and must be at least 6 charecter')
   }
 
-  if(password.value.length < 10){
+  if(passwordInput.value.length < 10){
     errorMessages.push ('Are you serious?!? get a bigger one or get hucked')
   }
 
-  if(password.value === Cpassword.value){
+  if(password.value !== passwordConfirmInput.value){
     errorMessages.push('Are you an idiot? Put the exact password , that is how confirmation work')
   }
 
 
-console.log(Inputvalue.length)
-console.log(password.value)
-console.log(Inputvalue.length)
 
 
 
 
-if (errorMessages.length >0){
-showErrors();
+if (errorMessages.length > 0){
+showErrors(errorMessages);
 e.preventDefault()
 }
 
@@ -77,9 +72,11 @@ function showErrors(errorMessages) {
   // Add each error to the error-list element
   // Make sure to use an li as the element for each error
   // Also, make sure you add the show class to the errors container
-errorMessages.forEach(e => {
-  errorsList.innerHTML = `<li>${e}</li>`
-});
-errorsContainer.classList.add('show')
+  errorMessages.forEach(errorMessage => {
+    const li = document.createElement("li")
+    li.innerText = errorMessage
+    errorsList.appendChild(li)
+  })
+  errorsContainer.classList.add("show")
 
 }
