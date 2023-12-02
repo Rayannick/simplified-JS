@@ -55,7 +55,7 @@ function clearErrors() {
 
   while(errorsList.children[0] =! null){
 
-   errorsList.removechild(errorsList.children[0])
+   errorsList.removeChild(errorsList.children[0])
   }
 
 errorsContainer.classList.remove('show')
