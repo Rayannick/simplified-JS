@@ -53,7 +53,7 @@ function clearErrors() {
   // This is the trickiest part of this exercise so if you get stuck and are unable to progress you can also set the innerHTML property of the error-list to an empty string and that will also clear the children. I recommend trying to accomplish this with a while loop, though, for practice.
   // Also, make sure you remove the show class to the errors container
 
-  while(errorsList.children[0] =! null){
+  while(errorsList.children[0] != null){
 
    errorsList.removeChild(errorsList.children[0])
   }
