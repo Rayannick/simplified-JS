@@ -46,7 +46,7 @@ e.preventDefault()
 //      1. Ensure the username is at least 6 characters long
 //      2. Ensure the password is at least 10 characters long
 //      3. Ensure the password and confirmation password match
-//      4. Ensure the terms checkbox is checked
+//      4. Ensure the terms checkbox is checked.
 //    TODO: If there are any errors then prevent the form from submitting and show the error messages
 
 // TODO: Define this function
