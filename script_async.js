@@ -64,5 +64,7 @@ function setTimeoutPromise (duration) {
 const button = document.querySelector('.button')
  
 function addEventListenerPromise(element,method){
-    
+    return new Promise((resolve,reject)=>{
+        element
+    })
 }
