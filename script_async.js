@@ -67,4 +67,4 @@ function addEventListenerPromise(element,method){
     return new Promise((resolve,reject)=>{
         element
     })
-}
+}  
