@@ -10,6 +10,27 @@ setTimeout(() => {
 }, 1000);
 
 
+// this is promise 
+
+// exp 1 : 
+const promise = new Promise((resolve,reject)=>{
+    const sum = 1 + 3;
+    if(sum === 2){
+        resolve('success')
+    }else{
+        reject('error')
+    }
+})
+
+
+
+promise.then(message=>{ //this is for success . take value from resolve function and execute as a next step.
+console.log(message)
+}).catch(message=>{ //this is for failure . take value from reject function and execute as a next step
+    console.log(message)
+})
+
+
 
 
 
@@ -35,5 +56,8 @@ function setTimeoutPromise (duration) {
 
 
 
+ console.log('first one is the sync function')
 
- console.log('this is the sync function')
+// exp 3
+
+
