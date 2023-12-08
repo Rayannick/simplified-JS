@@ -61,3 +61,5 @@ function setTimeoutPromise (duration) {
 // exp 3
 
 
+const button = document.querySelector('.button')
+ 
