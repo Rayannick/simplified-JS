@@ -65,6 +65,6 @@ const button = document.querySelector('.button')
  
 function addEventListenerPromise(element,method){
     return new Promise((resolve,reject)=>{
-        element
+        element.addEventListener(method,resolve)
     })
 }  
