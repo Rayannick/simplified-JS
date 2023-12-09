@@ -73,4 +73,5 @@ function addEventListenerPromise(element,method){
 
 addEventListenerPromise(button,'click').then(e=>{
     console.log('clicked')
+    console.log(e)
 })
