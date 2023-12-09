@@ -68,3 +68,7 @@ function addEventListenerPromise(element,method){
         element.addEventListener(method,resolve)
     })
 }  
+
+
+
+addEventListenerPromise(button,'click')
