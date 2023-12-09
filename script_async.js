@@ -74,8 +74,7 @@ function addEventListenerPromise(element,method){
 
 
 addEventListenerPromise(button1,'click').then(e=>{
-    console.log('clicked')
-    console.log(e)
+    console.log('First one clicked')
 }).catch(()=>{
     console.log('something unexpected happend')
 })
