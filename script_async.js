@@ -61,7 +61,9 @@ function setTimeoutPromise (duration) {
 // exp 3
 
 
-const button = document.querySelector('.button')
+const button1 = document.querySelector('.button')
+const button2 = document.querySelector('.button2')
+
  
 function addEventListenerPromise(element,method){
     return new Promise((resolve,reject)=>{
@@ -71,7 +73,13 @@ function addEventListenerPromise(element,method){
 
 
 
-addEventListenerPromise(button,'click').then(e=>{
+addEventListenerPromise(button1,'click').then(e=>{
     console.log('clicked')
     console.log(e)
+}).catch(()=>{
+    console.log('something unexpected happend')
+})
+
+addEventListenerPromise(button2,'click').then(e=>{
+    console.log('second one clicked')
 })
