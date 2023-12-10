@@ -86,5 +86,13 @@ addEventListenerPromise(button2,'click').then(e=>{
 
 
 
-// lesson : promise all,promise any , promise settled, finally)
+// lesson : promise all,promise any, promise race, promise settled, finally)
 
+Promise.all([
+    Promise.resolve('first one'),
+    Promise.reject('second one'),
+    Promise.resolve('third one')
+])
+.then(message =>{
+    console.log(message)
+}).catch(error=>{console.error(error)})
