@@ -82,3 +82,9 @@ addEventListenerPromise(button1,'click').then(e=>{
 addEventListenerPromise(button2,'click').then(e=>{
     console.log('second one clicked')
 })
+
+
+
+
+// lesson : promise all,promise any , promise settled, finally)
+
