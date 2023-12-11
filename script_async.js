@@ -88,11 +88,39 @@ addEventListenerPromise(button2,'click').then(e=>{
 
 // lesson : promise all,promise any, promise race, promise settled, finally)
 
-Promise.all([
+Promise.all([ //to run multiple promises at the same time, if every promises success . it is useful on settimeout function
     Promise.resolve('first one'),
-    Promise.reject('second one'),
+    Promise.resolve('second one'),
     Promise.resolve('third one')
 ])
 .then(message =>{
     console.log(message)
+}).catch(error=>{console.error(error)})
+
+Promise.any([ // to run on any promises success.
+Promise.resolve('first one'),
+Promise.resolve('second one'),
+Promise.resolve('third one')
+])
+.then(message =>{
+console.log(message)
+}).catch(error=>{console.error(error)})
+
+Promise.race([ // first one to success
+Promise.resolve('first one'),
+Promise.resolve('second one'),
+Promise.resolve('third one')
+])
+.then(message =>{
+console.log(message)
+}).catch(error=>{console.error(error)})
+
+
+Promise.allSettled([ // return array of promise value both resolve or reject
+Promise.resolve('first one'),
+Promise.resolve('second one'),
+Promise.resolve('third one')
+])
+.then(message =>{
+console.log(message)
 }).catch(error=>{console.error(error)})
