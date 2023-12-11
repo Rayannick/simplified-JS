@@ -137,5 +137,5 @@ function setTimeoutPromise2(delay){
 }
 
 async function dostuff(){
-    
+    await setTimeoutPromise2(250)
 }
