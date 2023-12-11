@@ -127,3 +127,11 @@ console.log(message)
 
 
 // async await
+
+function setTimeoutPromise2(delay){
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            resolve('you waited')
+        },  delay);
+    })
+}
