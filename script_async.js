@@ -173,7 +173,7 @@
 // dostuff()
 
 
-// exemple 02:
+// exemple 02: difference btn async/await VS .then/.catch
 
 function getValueWithDealy2(name,delay){
     return new Promise ((resolve,reject)=>{
@@ -183,19 +183,38 @@ function getValueWithDealy2(name,delay){
     })
 }
 
-async function dostuff2(){
-    try{
-        const value1 = await getValueWithDealy2('Ami',1000)
-        console.log(value1);
-        const value2 = await getValueWithDealy2('jokhon',1500)
-        console.log(value2);
-        const value3 =await getValueWithDealy2('thakbo na',2000)
-        console.log(value3);
+// async function dostuff2(){ //1000+1500+2000 millisecond
+//     try{
+//         const value1 = await getValueWithDealy2('Ami',1000)
+//         console.log(value1);
+//         const value2 = await getValueWithDealy2('jokhon',1500)
+//         console.log(value2);
+//         const value3 =await getValueWithDealy2('thakbo na',2000)
+//         console.log(value3);
         
         
-    }catch(e){
-        console.log(e)
-    }
-}
+//     }catch(e){
+//         console.log(e)
+//     }
+// }
 
-dostuff2()
+// //2500 millisecond
+// getValueWithDealy2('ki',2500).then(m => console.log(m))
+// getValueWithDealy2('korbi re',2500).then(m => console.log(m))
+// getValueWithDealy2('booka?',2500).then(m => console.log(m))
+// dostuff2()
+
+
+//more exemple
+// async function dd(){
+//     for(let i=0;i<10;i++){
+// const value = await getValueWithDealy2(i,2000)
+// console.log(value)
+
+//     }
+// }
+// dd()
+
+for(let i=0;i<20;i++){
+getValueWithDealy2(i).then(m => console.log(m))
+}
