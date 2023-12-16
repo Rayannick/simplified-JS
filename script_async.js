@@ -138,9 +138,9 @@ function setTimeoutPromise2(delay){
 
 // method : 1
 
-setTimeoutPromise2(){
+setTimeoutPromise2(2000)
 
-}
+
 
 
 
