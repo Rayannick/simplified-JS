@@ -128,7 +128,7 @@ console.log(message)
 
 // async await
 
-function setTimeoutPromise2(delay){
+function getValueWithDealy(delay){
     return new Promise((resolve,reject)=>{
         setTimeout(() => {
             resolve(`you waited ${delay} millisecond.`)
@@ -136,9 +136,16 @@ function setTimeoutPromise2(delay){
     })
 }
 
+function getValueWithDealyError(delay){
+    return new Promise((resolve,reject) => {
+        setTimeout(() => {
+            reject(`you wasted ${delay} millisecond`)
+        }, delay);
+    } )
+}
 // method : 1
 
-setTimeoutPromise2(2000).then(message =>{
+getValueWithDealy(2000).then(message =>{
     console.log(message)
     console.log('first')
 })
@@ -148,9 +155,19 @@ setTimeoutPromise2(2000).then(message =>{
 })
 
 
+// method : 2
 
 async function dostuff(){
-    await setTimeoutPromise2(250)
-    console.log('1')
+   try{
+    console.log('before error')
+    await getValueWithDealy(250)
+    console.log('after error')
+} catch(error){
+    console.log('here')
+    console.log(error)
+} finally{
+    console.log('finally happen without depend on reject/resolve')
+}
 }
 
+dostuff()
