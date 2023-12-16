@@ -131,10 +131,18 @@ console.log(message)
 function setTimeoutPromise2(delay){
     return new Promise((resolve,reject)=>{
         setTimeout(() => {
-            resolve('you waited')
+            resolve(`you waited ${delay} millisecond.`)
         },  delay);
     })
 }
+
+// method : 1
+
+setTimeoutPromise2(){
+
+}
+
+
 
 async function dostuff(){
     await setTimeoutPromise2(250)
