@@ -138,8 +138,10 @@ function setTimeoutPromise2(delay){
 
 // method : 1
 
-setTimeoutPromise2(2000)
-
+setTimeoutPromise2(2000).then(message =>{
+    console.log(message)
+    console.log('first')
+})
 
 
 
