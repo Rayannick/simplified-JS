@@ -142,7 +142,10 @@ setTimeoutPromise2(2000).then(message =>{
     console.log(message)
     console.log('first')
 })
-
+.then(message=>{
+    console.log(message)
+    console.log('second')
+})
 
 
 
