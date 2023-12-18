@@ -63,4 +63,4 @@ async function doStuff3(){
     })
     const post = await response.json()
     console.log(post)
-}
+} 
