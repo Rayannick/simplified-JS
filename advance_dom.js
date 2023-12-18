@@ -15,34 +15,34 @@ button3.addEventListener('click',doStuff3)
 
 
 
-// //  method 1
-// function doStuff(){
-// fetch(URL1).then(resp =>{
-//     return resp.json()
-// }).then(data =>{
-//     console.log(data.map(user => user.name))
-// })
+//  method 1
+function doStuff(){
+fetch(URL1).then(resp =>{
+    return resp.json()
+}).then(data =>{
+    console.log(data.map(user => user.name))
+})
 
-// }
+}
 
-// // method 2
-// async function doStuff2(){ 
-//     try{
-//         const response = await fetch(URL1)
-//         if(response.ok){
-//             // notice the difference
+// method 2
+async function doStuff2(){ 
+    try{
+        const response = await fetch(URL1)
+        if(response.ok){
+            // notice the difference
 
-//             // const users = response.json()
-//             const users = await response.json()
-//             console.log(users)
-//         }else{
-//             console.log('kon baler user?? Database e nai') // it will give error for the api
-//         }
+            // const users = response.json()
+            const users = await response.json()
+            console.log(users)
+        }else{
+            console.log('kon baler user?? Database e nai') // it will give error for the api
+        }
     
-//     }catch(e){
-//         console.log('errrrrarr') //it will give error for the function
-//     }
-//  }
+    }catch(e){
+        console.log('errrrrarr') //it will give error for the function
+    }
+ }
 
 
 
