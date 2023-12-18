@@ -1,10 +1,10 @@
 const URL1 = 'https://jsonplaceholder.typicode.com/posts';
-// const button = document.querySelector('.button')
-// const button2 = document.querySelector('.button2')
+const button = document.querySelector('.button')
+const button2 = document.querySelector('.button2')
 const button3 = document.querySelector('.button3')
 
-// button.addEventListener('click',doStuff)
-// button2.addEventListener('click',doStuff2)
+button.addEventListener('click',doStuff)
+button2.addEventListener('click',doStuff2)
 button3.addEventListener('click',doStuff3)
 
 
