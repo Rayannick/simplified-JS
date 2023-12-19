@@ -88,3 +88,4 @@ const expired_date = new Date(1999,0,1).toUTCString()//for remove cookies
 document.cookie = `name=kibrya; expires=${date}`//manual expire , client/server , 4KB
 console.log(document.cookie)
 document.cookie = `name=;expire=${expired_date}`
+
