@@ -30,6 +30,8 @@ async function doStuff2(){
     try{
         const response = await fetch(URL1)
         if(response.ok){
+
+
             // notice the difference
 
             // const users = response.json()
@@ -65,3 +67,24 @@ async function doStuff3(){
     console.log(post)
 } 
 
+
+
+
+
+
+// Lesson : Cookie Session LocalStorage
+
+localStorage.setItem('name','kibrya') //never expire , for client , 10MB
+sessionStorage.setItem('age','25') //expire on tab close , for client , 5MB
+
+// localStorage.removeItem('name')
+// sessionStorage.removeItem('age')
+
+
+// cookies are different.
+
+const date = new Date(9999,0,1).toUTCString() //for never expire the cookies
+const expired_date = new Date(1999,0,1).toUTCString()//for remove cookies
+document.cookie = `name=kibrya; expires=${date}`//manual expire , client/server , 4KB
+console.log(document.cookie)
+document.cookie = `name=;expire=${expired_date}`
