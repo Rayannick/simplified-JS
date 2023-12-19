@@ -89,3 +89,5 @@ document.cookie = `name=kibrya; expires=${date}`//manual expire , client/server 
 console.log(document.cookie)
 document.cookie = `name=;expire=${expired_date}`
 
+
+
