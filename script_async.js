@@ -220,3 +220,4 @@ dd()
 for(let i=0;i<20;i++){ //it doesn't follow the wait. all value wait for 2000
 getValueWithDealy2(i,2000).then(m => console.log(m))
 }
+
