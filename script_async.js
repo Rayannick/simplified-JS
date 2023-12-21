@@ -223,3 +223,5 @@ getValueWithDealy2(i,2000).then(m => console.log(m))
 
 
 
+
+
