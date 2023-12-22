@@ -5,6 +5,9 @@ const input = document.querySelector("#todo-input")
 
 
 
-form.addEventListener('submit',(e)=>{
+
+
+form.addEventListener("submit", e => {
     e.preventDefault()
+
 })
