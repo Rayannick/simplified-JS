@@ -1,7 +1,11 @@
 const form = document.querySelector("#new-todo-form")
-const input = document.querySelector("#todo-input")
-
-
+const todoInput = document.querySelector("#todo-input")
+const todos = []
+// take input
+// save in localstorage
+// show it in font end
+// click to remove
+//
 
 
 
@@ -13,9 +17,18 @@ const input = document.querySelector("#todo-input")
 
 form.addEventListener("submit", e => {
     e.preventDefault()
+    const todoName = todoInput.value;
 
-    const todoValue = input.value;
+    if(todoName === '') return;
+    const newTodo = {
+        name: todoName,
+        id : Math.floor(Math.random() * 100),
+        complete : false
 
-    console.log(todoValue)
+    }
+
+todos.push(newTodo);
+
+    console.log(todos)
 
 })
