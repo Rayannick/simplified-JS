@@ -10,7 +10,7 @@ todos.forEach(renderTodo)
 
 
 
-
+// console.log(todos)
 
 
 list.addEventListener("change", e => {
@@ -18,7 +18,9 @@ list.addEventListener("change", e => {
   
     const parent = e.target.closest(".list-item")
     const todoId = parent.dataset.todoId
-    const todo = todos.find(t => t.id === todoId)
+    console.log(todoId)
+    const todo = todos.find(t => t.id == todoId)
+    console.log(todo)
     todo.complete = e.target.checked
     saveTodos()
   })
@@ -30,7 +32,8 @@ list.addEventListener("change", e => {
     const parent = e.target.closest('.list-item')
     const todoId = parent.dataset.todoId
     parent.remove()
-    todos = todos.filter(todo => todo.id !== todoId)
+    todos = todos.filter(todo => todo.id != todoId)
+    console.log(todos)
     saveTodos()
 })
 
@@ -57,17 +60,6 @@ function loadTodos(){  //load items from localstorage and give object
 
 
 
-
-// list.addEventListener('change',e =>{
-//     if(!e.target.matches("[data-list-item-checkbox]")) return
-//     const parent = e.target.closest('.list-item')
-//     const todoId = parent.dataset.todoId
-//     const todo = todos.find(t => t.id ===todoId)
-    
-//     todo.complete = e.target.checked
-//     saveTodos()
-    
-//     })
 
 
 
@@ -100,19 +92,6 @@ todoInput.value = ''
 
 })
     
-    // function renderTodo(todos){  // show it in font end
-    
-    //     const templateClone = template.content.cloneNode(true)
-    //     const listItem = templateClone.querySelector('.list-item')
-    //     listItem.dataset.todoId = todos.id
-    //     const textElement = templateClone.querySelector('[data-list-item-text')
-    //     textElement.innerText = todos.name
-    //     const checkbox = templateClone.querySelector('[data-list-item-checkbox]')
-    //     checkbox.checked = todos.complete
-    //     list.appendChild(templateClone)
-        
-    
-    // }
 
 
 
