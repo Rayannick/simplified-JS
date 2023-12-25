@@ -105,7 +105,3 @@ todoInput.value = ''
         checkbox.checked = todo.complete
         list.appendChild(templateClone)
       }
-
-
-
-
