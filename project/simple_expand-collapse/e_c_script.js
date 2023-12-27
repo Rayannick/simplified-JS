@@ -4,4 +4,6 @@ document.addEventListener('click', (e)=>{
     const cardBody = card.querySelector('.card-body')
      
     cardBody.classList.toggle('show')
+
+    
 })
