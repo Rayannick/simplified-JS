@@ -6,4 +6,6 @@ document.addEventListener('click', (e)=>{
     cardBody.classList.toggle('show')
 
     e.target.innerText = e.target.innerText === 'expand' ? 'collapse' : 'expand'
+
+    
 })
