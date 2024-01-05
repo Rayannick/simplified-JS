@@ -8,6 +8,7 @@ document.addEventListener('click', (e)=>{
     e.target.innerText = e.target.innerText === 'expand' ? 'collapse' : 'expand'
 
     if(e.target.innerText === 'expand'){
-        
+
     }
 })
+
