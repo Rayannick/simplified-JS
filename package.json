@@ -1,0 +1,20 @@
+{
+  "name": "practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "advance_dom.js",
+  "scripts": {
+    "start": "parcel project/simple_date-picker/index.html",
+    "build": "parcel build project/simple_date-picker/index.html"
+     
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "date-fns": "^3.2.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
