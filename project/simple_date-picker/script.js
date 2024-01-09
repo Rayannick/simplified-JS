@@ -1,1 +1,1 @@
-console.log('hi mf')
+const datePickerButton = document.querySelector('.date-picker-button')
