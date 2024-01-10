@@ -22,22 +22,33 @@ function setDate(date) {
 }
 
 
-function setupDatePicker(selectedDate) {
+function setupDatePicker() {
 
-    datePickerHeaderText.innerText = format(selectedDate, 'MMMM - yyyy')
-    setupMonthButtons(selectedDate)
+    datePickerHeaderText.innerText = format(currentDate, 'MMMM - yyyy')
+    // setupMonthButtons(selectedDate)
 
 }
 
 
 
-function setupMonthButtons(selectedDate) {
-    nextMonthButton.addEventListener('click', () => {
-        setupDatePicker(addMonths(selectedDate, 1))
-    }, { once: true })
-    previousMonthButton.addEventListener('click', () => {
-        setupDatePicker(subMonths(selectedDate, 1))
-    })
+// function setupMonthButtons(selectedDate) {
+nextMonthButton.addEventListener('click', () => {
+    
+    console.log('nextbtn')
+
+
+    currentDate = addMonths(currentDate,1)
+    setupDatePicker()
 }
+    // , { once: true }
+)
+previousMonthButton.addEventListener('click', () => {
+    
+    console.log('prevbtn')
+    
+    currentDate = subMonths(currentDate,1)
+    setupDatePicker()
+})
+// }
 
 setDate(new Date())
