@@ -12,6 +12,7 @@ datePickerButton.addEventListener('click', () => {
 
     const selectedDate = fromUnixTime(datePickerButton.dataset.selectedDate);
     setupDatePicker(selectedDate)
+    currentDate = selectedDate
 
 })
 
@@ -43,7 +44,7 @@ nextMonthButton.addEventListener('click', () => {
     // , { once: true }
 )
 previousMonthButton.addEventListener('click', () => {
-    
+
     console.log('prevbtn')
     
     currentDate = subMonths(currentDate,1)
@@ -52,3 +53,4 @@ previousMonthButton.addEventListener('click', () => {
 // }
 
 setDate(new Date())
+
