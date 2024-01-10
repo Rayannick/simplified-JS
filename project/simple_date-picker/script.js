@@ -55,7 +55,7 @@ dateElement.addEventListener('click',()=>{
 })
 dateGrid.appendChild(dateElement)
 
-console.log(selectedDate) //bug
+// console.log(selectedDate) //bug
 })
 }
 
