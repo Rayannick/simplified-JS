@@ -1,4 +1,4 @@
-import { addMonths, format, fromUnixTime, getUnixTime, subMonths } from "date-fns"
+import { addMonths, eachDayOfInterval, endOfMonth, endOfWeek, format, fromUnixTime, getUnixTime, startOfMonth, startOfWeek, subMonths } from "date-fns"
 
 const datePickerButton = document.querySelector('.date-picker-button')
 const datePicker = document.querySelector('.date-picker')
@@ -28,8 +28,18 @@ function setupDatePicker() {
     datePickerHeaderText.innerText = format(currentDate, 'MMMM - yyyy')
     // setupMonthButtons(selectedDate)
 
+
 }
 
+function setupDates(selectedDate) {
+    const firstWeekStart = startOfWeek(startOfMonth(currentDate))
+    const lastWeekend = endOfWeek(endOfMonth(currentDate))
+    const dates = eachDayOfInterval({start : firstWeekStart, end : lastWeekend})
+
+    dates.forEach(date =>{
+        console.log(date)
+    })
+}
 
 
 // function setupMonthButtons(selectedDate) {
