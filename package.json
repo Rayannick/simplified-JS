@@ -4,8 +4,8 @@
   "description": "",
   "main": "advance_dom.js",
   "scripts": {
-    "start": "parcel project/simple_date-picker/index.html",
-    "build": "parcel build project/simple_date-picker/index.html"
+    "start": "parcel project/simple_website/index.html project/simple_website/team.html project/simple_website/store.html",
+    "build": "parcel build project/simple_website/index.html project/simple_website/team.html project/simple_website/store.html"
      
   },
   "keywords": [],
