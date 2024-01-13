@@ -15,6 +15,7 @@
       {
         "button-name": "off"
       }
-    ]
+    ],
+    "highest-available-document-mode": "off"
   }
 }
